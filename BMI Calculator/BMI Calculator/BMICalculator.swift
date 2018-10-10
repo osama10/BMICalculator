@@ -11,12 +11,18 @@ import Foundation
 class BMICalculator{
     
     func calculateBMI(weight : Double, height : Double)->String{
-        let bmi = weight/(height * height)
-        return getBMIType(bmi: bmi.rounded())
+        var result = ""
+        if(weight > 0 && height > 0){
+            let bmi = weight/(height * height)
+            result  = getBMIType(bmi: bmi.rounded())
+        }else{
+            result = "Height or Weight can't be zero"
+        }
+        return result
     }
     
     private func getBMIType(bmi : Double)->String{
-        var result = "Your BMI is \(bmi). "
+        var result = ""
         if(bmi > 24.9){
             result +=  "You are OVER WEIGHT"
         }else if(bmi < 18.5){

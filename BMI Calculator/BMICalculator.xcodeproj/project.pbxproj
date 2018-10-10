@@ -12,8 +12,8 @@
 		4A597A8C216D37F000D4A36D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A597A8A216D37F000D4A36D /* Main.storyboard */; };
 		4A597A8E216D37F200D4A36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A597A8D216D37F200D4A36D /* Assets.xcassets */; };
 		4A597A91216D37F200D4A36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A597A8F216D37F200D4A36D /* LaunchScreen.storyboard */; };
-		4A597A9C216D37F300D4A36D /* BMI_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A597A9B216D37F300D4A36D /* BMI_CalculatorTests.swift */; };
 		4A597AA7216D39C900D4A36D /* BMICalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A597AA6216D39C900D4A36D /* BMICalculator.swift */; };
+		4A597AAD216DDEA900D4A36D /* BMICalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A597AAC216DDEA900D4A36D /* BMICalculatorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +35,9 @@
 		4A597A90216D37F200D4A36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A597A92216D37F200D4A36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A597A97216D37F300D4A36D /* BMI CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMI CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A597A9B216D37F300D4A36D /* BMI_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorTests.swift; sourceTree = "<group>"; };
 		4A597A9D216D37F300D4A36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A597AA6216D39C900D4A36D /* BMICalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculator.swift; sourceTree = "<group>"; };
+		4A597AAC216DDEA900D4A36D /* BMICalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 		4A597A9A216D37F300D4A36D /* BMI CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A597A9B216D37F300D4A36D /* BMI_CalculatorTests.swift */,
 				4A597A9D216D37F300D4A36D /* Info.plist */,
+				4A597AAC216DDEA900D4A36D /* BMICalculatorTest.swift */,
 			);
 			path = "BMI CalculatorTests";
 			sourceTree = "<group>";
@@ -152,6 +152,7 @@
 					};
 					4A597A96216D37F300D4A36D = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 						TestTargetID = 4A597A82216D37F000D4A36D;
 					};
 				};
@@ -210,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A597A9C216D37F300D4A36D /* BMI_CalculatorTests.swift in Sources */,
+				4A597AAD216DDEA900D4A36D /* BMICalculatorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +398,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "BMI CalculatorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +408,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "osama.BMI-CalculatorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BMI Calculator.app/BMI Calculator";
@@ -417,6 +420,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "BMI CalculatorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
